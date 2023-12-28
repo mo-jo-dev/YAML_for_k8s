@@ -1,0 +1,9 @@
+---
+School:           
+- name: "NIT Sikkim"
+  principal: "Don't know"
+  Students:        
+  - rno: 55
+    name: "MoJo",
+    marks: 75
+...
