@@ -1,0 +1,17 @@
+{
+    "School": [
+        {
+            "name": "NIT Sikkim",
+            "principal": "Don't know",
+            "Students": [
+                {
+                    "Student": {
+                        "rno": 55,
+                        "name": "MoJo",
+                        "marks": 75
+                    }
+                }
+            ]
+        }
+    ]
+}
