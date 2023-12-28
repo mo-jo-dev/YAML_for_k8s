@@ -31,6 +31,7 @@ binaryNum: !!int 0b110110
 octalNum: !!int 0645556632
 hexaNum: !!int 0x456
 commaValue: !!int +540_000 #540,000
+exponential numbers: 6.023E56
 
 # Floating point numbers:
 marks: !!float 245.4
