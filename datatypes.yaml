@@ -1,0 +1,53 @@
+# String Variables
+myself: Mohit
+fruit: "grapes"
+job: 'jobless'
+
+bio: |
+hey, my name is Mohit 
+its so sweet of you that you are here
+
+# Write single line in multiple lines if you need more clarity
+
+message: >
+Whatever I 
+write after this,
+will appear on a
+single line
+
+# The above one is same as
+message: Whatever I write after this, will appear on a single line
+
+number: 5473 #Integer
+marks: 98.76 #Float
+booleanValue: No #Here No is used, we can also use n, N, false, False, FALSE
+# Same for true, we can use yes, Y, y, TRUE, True
+
+# If we need to specify the type on our own, we can use:
+num: !!int 0;
+positiveValue: !!int 45
+negativeValue: !!int -45
+binaryNum: !!int 0b110110
+octalNum: !!int 0645556632
+hexaNum: !!int 0x456
+commaValue: !!int +540_000 #540,000
+
+# Floating point numbers:
+marks: !!float 245.4
+infinite: !!float .inf
+not a num: .nan
+
+#Boolean
+isBool: !!bool yes
+
+#String
+name: !!str My name is mohit
+
+#Null
+surname: !!null Null #This is a null, we can also write Null, NULL, ~
+~: this is a null key
+
+#Date and Time
+date: !!timestamp 2002-12-14
+indianTime: 2002-12-14T02:59:43.1Z +5:30
+noTimeZone: indianTime: 2002-12-14T02:59:43.1Z
