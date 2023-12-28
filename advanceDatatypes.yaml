@@ -1,0 +1,105 @@
+student: !!seq
+  - marks
+  - name
+  - roll_no
+
+#Like this also
+student: [marks, name, roll_no]
+
+#If some of the keys of the seq will be empty
+#is is know has sparse seq
+sparse seq: 
+  - hello
+  - namaste
+  -
+  - upar empty
+  - null
+  - 
+  - sup 
+
+# nested sequence
+nested seq:
+  - name
+  - roll_no
+  - subject:
+     - Maths
+     - Science
+     - Social Science
+  - Interest:
+     - Web Development
+     - Java Development
+     - Problem Solving
+  -
+    - apple
+    - mango
+    - banana
+
+#or
+-
+ - name
+ - roll_no
+ - subject
+-
+ - apple
+ - mango
+ - banana
+
+# Key value pairs are calles maps
+ how: for this, we use 
+      !!map
+
+#Nested mapping: map within a map
+name: Mohit Joshi
+role:
+  age: 89
+  job: jobless
+
+#The above is same as 
+name: Mohit Joshi
+role: { age: 89, job: jobless }
+
+#pairs: key map have duplicate values
+#!!pairs
+
+pairExample: !!pairs
+  - job: student
+  - job: jobless
+# This will be a array of hash tables
+#Same as 
+pairExample: !!pairs [ job: student, job: jobless ]
+
+# !!set will allow use to use unique values
+names: !!set
+  ? Mohit
+  ? Hari
+  ? Monk
+
+# dictionary !!omap
+people: !!omap
+  - Mohit
+     name: Mohit Joshi
+     age: 89
+     height: 178
+  - Pankaj
+     name: Pankaj Joshi
+     age: 91.5
+     height: 175.5
+
+# Reusing some properties using anchors
+likings: &likes
+  fav fruit: mango
+  dislikes: grapes
+
+person1:
+  name: Mohit Joshi
+  <<: *likes
+
+person2:
+  name: Hari Kumar
+  <<: *likes
+  dislikes: Apple
+# This will look like: 
+person2:
+  name: Hari Kumar
+  fav fruit: mango
+  dislikes: Apple
