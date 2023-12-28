@@ -1,7 +1,7 @@
 "apple" : "I am a red fruit"
 1: : "This is Mohit's roll number"
 ---
-# Lists
+# Lists          #This is a comment in YAML, here, we dont have multiline comments 
 - apple
 - mango
 - banana
@@ -11,4 +11,8 @@
 cities:
   - new delhi
   - ravangla
+---
+cities: [new delhi, ravangla]
+---
+{mango: "yellow fruit", age: 325}
 ...
